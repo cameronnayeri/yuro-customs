@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Yuro Customs</title>
+  <meta name="description" content="Over two decades of fine jewelry craftsmanship, Boston-based. Trusted by New England Patriots players and artists including Kevin Gates.">
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+  <style>
+    .page-header h1 { font-size: clamp(2.2rem, 5vw, 3.8rem); }
+    .about-story__text p {
+      font-size: clamp(1rem, 1.6vw, 1.15rem);
+      line-height: 1.8;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a class="nav__logo" href="index.html">Yuro Customs</a>
+    <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+    <ul class="nav__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="collection.html">Gallery</a></li>
+      <li><a href="#footer">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="edge-pad">
+
+    <header class="page-header">
+      <span class="eyebrow">About</span>
+      <h1>The History Behind Your Piece</h1>
+    </header>
+
+    <div class="about-story">
+      <div class="about-story__text">
+        <p>Yuro Customs is a legacy of excellence in fine jewelry. With a heritage spanning over two decades, we stand for unparalleled quality and luxury in jewelry making.</p>
+        <p>At the helm is Mr. Yuro, whose artisanal expertise and visionary leadership have earned recognition from publications like the Boston Globe. Each creation is a celebration of artistry — every piece narrates its own story.</p>
+        <p>Our clientele includes players from the New England Patriots and artists such as Kevin Gates, each seeking exceptional craftsmanship.</p>
+      </div>
+      <div class="about-story__img">
+        <img src="assets/img/portrait.jpg" alt="Mr. Yuro, founder of Yuro Customs" loading="lazy">
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="footer edge-pad" id="footer">
+    <div class="footer__inner">
+      <span class="footer__brand">Yuro Customs</span>
+      <div class="footer__meta">
+        <a href="tel:+16179596497">(617) 959-6497</a>
+        <a href="mailto:hello@yurocustoms.com">hello@yurocustoms.com</a>
+        <span>333 Washington St #537, Boston, MA 02108</span>
+        <span>Mon–Sat 11 AM–6 PM</span>
+      </div>
+      <p class="footer__copy">&copy; 2026 Yuro Customs. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav__toggle');
+    const links  = document.querySelector('.nav__links');
+    toggle.addEventListener('click', () => {
+      const open = links.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', open);
+      toggle.innerHTML = open ? '&#215;' : '&#9776;';
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yuro Customs — Custom Grillz &amp; Fine Jewelry, Boston</title>
+  <meta name="description" content="Custom grillz and fine jewelry made in Boston. 100% custom, one-day process. Visit us at 333 Washington St, Suite 537. Call (617) 959-6497.">
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+  <style>
+    /* ---- HERO ---- */
+    .home-hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: clamp(420px, 65vh, 680px);
+    }
+    .home-hero__text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1.1rem;
+      overflow: hidden;
+      padding: 2.5rem var(--gutter);
+    }
+    .home-hero__text h1 { font-size: clamp(1.9rem, 4vw, 3.2rem); }
+    .home-hero__text p { color: var(--muted); font-size: 1.1rem; }
+    .home-hero__text .btn { font-size: 0.76rem; padding: 0.9rem 2rem; }
+    .home-hero__text .cta-row { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+    .home-hero__img { overflow: hidden; background: #D9D3C8; }
+    .home-hero__img img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+
+    @media (max-width: 767px) {
+      .home-hero { grid-template-columns: 1fr; height: auto; }
+      .home-hero__img { height: 52vw; min-height: 200px; }
+      .home-hero__text { padding: 1.5rem var(--gutter); }
+    }
+
+    /* ---- QUICK INFO BAR ---- */
+    .info-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem 2.5rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      border-top: 1px solid rgba(154,123,79,0.2);
+      justify-content: space-between;
+    }
+    .info-bar__item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    .info-bar__item strong { color: var(--ink); font-weight: 600; }
+
+    /* ---- SERVICES ---- */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: rgba(154,123,79,0.2);
+      border: 1px solid rgba(154,123,79,0.2);
+    }
+    .service {
+      background: var(--paper);
+      padding: 1.75rem 1.5rem;
+    }
+    .service h3 { margin-bottom: 0.5rem; }
+    .service p { font-size: 0.88rem; }
+    @media (max-width: 767px) {
+      .services { grid-template-columns: 1fr; }
+    }
+
+    /* ---- PHOTO STRIP ---- */
+    .photo-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+    }
+    .photo-strip img {
+      width: 100%; aspect-ratio: 1; object-fit: cover; display: block;
+    }
+    @media (max-width: 599px) {
+      .photo-strip { grid-template-columns: 1fr; gap: 0.5rem; }
+      .photo-strip img { aspect-ratio: 4/3; }
+    }
+
+    /* ---- TESTIMONIALS ---- */
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .testimonial {
+      border-top: 2px solid var(--brass);
+      padding-top: 1rem;
+    }
+    .testimonial__stars {
+      font-size: 0.75rem;
+      color: var(--brass);
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+    }
+    .testimonial__text {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.65;
+      margin-bottom: 0.75rem;
+    }
+    .testimonial__name {
+      font-size: 0.7rem;
+      font-weight: 700;
+      font-stretch: expanded;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+    @media (max-width: 767px) {
+      .testimonials { grid-template-columns: 1fr; }
+    }
+
+    /* ---- SECTION WRAPPER ---- */
+    .section {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      border-top: 1px solid rgba(154,123,79,0.15);
+    }
+    .section__label {
+      font-size: 0.62rem;
+      font-weight: 700;
+      font-stretch: expanded;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--brass);
+      margin-bottom: 1rem;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a class="nav__logo" href="index.html">Yuro Customs</a>
+    <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+    <ul class="nav__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="collection.html">Gallery</a></li>
+      <li><a href="#footer">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="home-hero">
+    <div class="home-hero__text">
+      <span class="eyebrow">Custom Grillz &amp; Fine Jewelry — Boston, MA</span>
+      <h1>Luxury Grillz, Made for You</h1>
+      <p>100% custom process. Walk in and leave the same day.</p>
+      <div class="cta-row">
+        <a href="tel:+16179596497" class="btn">Call to Book &nbsp; (617) 959-6497</a>
+        <a href="collection.html" class="btn btn--outline">View Gallery</a>
+      </div>
+    </div>
+    <div class="home-hero__img">
+      <img src="assets/img/gallery/post-585.jpg" alt="Custom grillz by Yuro Customs" loading="eager">
+    </div>
+  </section>
+
+  <!-- QUICK INFO -->
+  <div class="info-bar edge-pad">
+    <div class="info-bar__item"><strong>Address:</strong> 333 Washington St, Suite #537, Boston, MA 02108</div>
+    <div class="info-bar__item"><strong>Hours:</strong> Mon–Sat 11 AM–6 PM &nbsp;·&nbsp; Sun Closed</div>
+    <div class="info-bar__item"><strong>Phone:</strong> <a href="tel:+16179596497" style="color:var(--brass);">(617) 959-6497</a></div>
+  </div>
+
+  <!-- SERVICES -->
+  <section class="section edge-pad">
+    <span class="section__label">What We Make</span>
+    <div class="services">
+      <div class="service">
+        <h3>Diamond Grillz</h3>
+        <p>Top &amp; bottom sets encrusted in diamonds. Fully custom fit, made to your exact mold.</p>
+      </div>
+      <div class="service">
+        <h3>Solid Gold Grillz</h3>
+        <p>10kt, 14kt, and 18kt options. Clean, comfortable, and built to last.</p>
+      </div>
+      <div class="service">
+        <h3>Fine Jewelry</h3>
+        <p>Custom chains, rings, and pendants. Bespoke pieces crafted with the same attention as our grillz.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHOTO STRIP -->
+  <section class="section edge-pad">
+    <div class="photo-strip">
+      <img src="assets/img/gallery/post-023.jpg" alt="Yuro Customs piece" loading="lazy">
+      <img src="assets/img/gallery/post-059.jpg" alt="Yuro Customs piece" loading="lazy">
+      <img src="assets/img/gallery/post-534.jpg" alt="Yuro Customs piece" loading="lazy">
+    </div>
+    <div style="margin-top:1.25rem;">
+      <a href="collection.html" class="btn btn--outline">See Full Gallery</a>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section edge-pad">
+    <span class="section__label">Customer Reviews · 5 Stars on Google</span>
+    <div class="testimonials">
+
+      <div class="testimonial">
+        <div class="testimonial__stars">★★★★★</div>
+        <p class="testimonial__text">"Such a seamless experience. Two of them actually. He's professional, communicative, and the vibe in his shop is awesome. I ended chatting it up with a neighbor vendor for a while. I'll definitely be back."</p>
+        <span class="testimonial__name">Nicholas</span>
+      </div>
+
+      <div class="testimonial">
+        <div class="testimonial__stars">★★★★★</div>
+        <p class="testimonial__text">"Yuro is the man — best jeweler around in Boston. He works with you extremely well to your needs and makes sure you have quality pieces. I've spent over 15k with him and never left feeling like he didn't put his absolute best work into what I paid him for."</p>
+        <span class="testimonial__name">Anthony</span>
+      </div>
+
+      <div class="testimonial">
+        <div class="testimonial__stars">★★★★★</div>
+        <p class="testimonial__text">"His quality is unmatched and prices can't be beat. Made me some custom 18kt grills. It might've taken a few days but it was well worth it. I would recommend others to go!!"</p>
+        <span class="testimonial__name">Erik</span>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer edge-pad" id="footer">
+    <div class="footer__inner">
+      <span class="footer__brand">Yuro Customs</span>
+      <div class="footer__meta">
+        <a href="tel:+16179596497">(617) 959-6497</a>
+        <a href="mailto:hello@yurocustoms.com">hello@yurocustoms.com</a>
+        <span>333 Washington St #537, Boston, MA 02108</span>
+        <span>Mon–Sat 11 AM–6 PM</span>
+      </div>
+      <p class="footer__copy">&copy; 2026 Yuro Customs. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav__toggle');
+    const links  = document.querySelector('.nav__links');
+    toggle.addEventListener('click', () => {
+      const open = links.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', open);
+      toggle.innerHTML = open ? '&#215;' : '&#9776;';
+    });
+  </script>
+
+</body>
+</html>

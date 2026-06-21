@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Yuro Customs</title>
+  <meta name="description" content="Visit Yuro Customs at 333 Washington St, Suite 537, Boston MA. Call (617) 959-6497. Open Mon–Sat 11 AM–6 PM.">
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+  <style>
+    .contact-blocks {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-lg);
+      margin-bottom: var(--space-lg);
+    }
+    .contact-block { display: flex; flex-direction: column; gap: 0.4rem; }
+    .contact-block .label {
+      font-size: 0.62rem;
+      font-weight: 700;
+      font-stretch: expanded;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--brass);
+    }
+    .contact-block .value {
+      font-size: 0.95rem;
+      color: var(--ink);
+      line-height: 1.5;
+    }
+    .contact-block a.value { transition: color 0.15s; }
+    .contact-block a.value:hover { color: var(--brass); }
+    .contact-block .value.phone {
+      font-size: 1.5rem;
+      font-weight: 800;
+      font-stretch: expanded;
+      color: var(--brass);
+    }
+    .hours-table { width: 100%; border-collapse: collapse; }
+    .hours-table tr { border-bottom: 1px solid rgba(154,123,79,0.15); }
+    .hours-table tr:last-child { border-bottom: none; }
+    .hours-table td {
+      padding: 0.45rem 0;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+    .hours-table td:first-child { color: var(--ink); font-weight: 500; padding-right: 2rem; }
+    .hours-table .closed { color: var(--muted); opacity: 0.5; }
+    @media (max-width: 767px) {
+      .contact-blocks { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a class="nav__logo" href="index.html">Yuro Customs</a>
+    <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+    <ul class="nav__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="collection.html">Gallery</a></li>
+      <li><a href="#footer">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="edge-pad">
+
+    <header class="page-header">
+      <span class="eyebrow">Contact</span>
+      <h1>Get in Touch</h1>
+    </header>
+
+    <div class="contact-blocks">
+
+      <div class="contact-block">
+        <span class="label">Phone</span>
+        <a class="value phone" href="tel:+16179596497">(617) 959-6497</a>
+        <span class="value" style="font-size:0.78rem; color:var(--muted);">Call to book a consultation</span>
+      </div>
+
+      <div class="contact-block">
+        <span class="label">Email</span>
+        <a class="value" href="mailto:hello@yurocustoms.com">hello@yurocustoms.com</a>
+        <span class="value" style="font-size:0.78rem; color:var(--muted);">We reply within 24 hours</span>
+      </div>
+
+      <div class="contact-block">
+        <span class="label">Address</span>
+        <a class="value" href="https://maps.google.com/?q=333+Washington+St+Suite+537+Boston+MA+02108" target="_blank" rel="noopener">
+          333 Washington St, Suite #537<br>Boston, MA 02108
+        </a>
+      </div>
+
+      <div class="contact-block">
+        <span class="label">Hours</span>
+        <table class="hours-table">
+          <tr><td>Monday</td><td>11 AM – 6 PM</td></tr>
+          <tr><td>Tuesday</td><td>11 AM – 6 PM</td></tr>
+          <tr><td>Wednesday</td><td>11 AM – 6 PM</td></tr>
+          <tr><td>Thursday</td><td>11 AM – 6 PM</td></tr>
+          <tr><td>Friday</td><td>11 AM – 6 PM</td></tr>
+          <tr><td>Saturday</td><td>11 AM – 6 PM</td></tr>
+          <tr><td>Sunday</td><td class="closed">Closed</td></tr>
+        </table>
+      </div>
+
+    </div>
+
+  </div>
+
+  <footer class="footer edge-pad" id="footer">
+    <div class="footer__inner">
+      <span class="footer__brand">Yuro Customs</span>
+      <div class="footer__meta">
+        <a href="tel:+16179596497">(617) 959-6497</a>
+        <a href="mailto:hello@yurocustoms.com">hello@yurocustoms.com</a>
+        <span>333 Washington St #537, Boston, MA 02108</span>
+        <span>Mon–Sat 11 AM–6 PM</span>
+      </div>
+      <p class="footer__copy">&copy; 2026 Yuro Customs. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav__toggle');
+    const links  = document.querySelector('.nav__links');
+    toggle.addEventListener('click', () => {
+      const open = links.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', open);
+      toggle.innerHTML = open ? '&#215;' : '&#9776;';
+    });
+  </script>
+
+</body>
+</html>
