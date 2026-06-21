@@ -343,6 +343,7 @@ p + p { margin-top: var(--space-sm); }
 }
 .footer__meta a { color: var(--muted); transition: color 0.15s; }
 .footer__meta a:hover { color: var(--ink); }
+.footer__meta svg { width: 1rem; height: 1rem; display: block; }
 .footer__copy {
   width: 100%;
   font-size: 0.68rem;
